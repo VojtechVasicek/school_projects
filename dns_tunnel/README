@@ -1,0 +1,28 @@
+Autor: Vojtěch Vašíček
+	 xvasic31
+Datum vytvoření: 14.11.2022
+Program odesílá na server dns pakety kde je zpracovává a vybírá z nich odeslaná data.
+Program zvládá odesílat pouze textové soubory. Server se musí spouštět jako sudo, protože
+využívá port 53.
+Překlad probíhá pomocí příkazu make all
+Příklad spuštění:
+	sudo ./dns_receiver www.host.com ./receiver/
+V druhém terminálu:
+	./dns_sender www.host.com test.txt test2.txt
+Seznam odevzdaných souborů:
+Receiver/
+	- dns_receiver.c
+	- dns_receiver_events.c
+	- dns_receiver_events.h
+Sender/
+	- dns_sender.c
+	- dns_sender_events.c
+	- dns_sender_events.h
+Shared/
+	- base32.c
+	- base32.h
+	- packet.c
+	- packet.h
+- Makefile
+- manual.pdf
+- README
